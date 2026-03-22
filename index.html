@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fo — 一个帮助你减少内耗、提升觉知的 AI Agent</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <div class="badge">Fo v0.1</div>
+      <h1>Fo</h1>
+      <p class="subtitle">一个帮助你减少内耗、提升觉知的 AI Agent</p>
+      <p class="desc">不是替你做决定，而是帮你先看清自己。</p>
+    </section>
+
+    <section class="panel input-panel">
+      <label for="question">你现在最放不下的是什么？</label>
+      <textarea id="question" placeholder="比如：我最近很焦虑，总担心自己做错选择。"></textarea>
+      <button id="generateBtn">看见一下</button>
+    </section>
+
+    <section id="result" class="panel result hidden">
+      <div class="card-header">
+        <span>Fo 的回应</span>
+        <button id="copyBtn" class="ghost">复制卡片</button>
+      </div>
+      <div class="card-section">
+        <h3>你困住自己的点</h3>
+        <p id="trap"></p>
+      </div>
+      <div class="card-section">
+        <h3>你真正该看见的</h3>
+        <p id="see"></p>
+      </div>
+      <div class="card-section">
+        <h3>今天的一个动作</h3>
+        <p id="act"></p>
+      </div>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
