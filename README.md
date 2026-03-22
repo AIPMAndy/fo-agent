@@ -1,4 +1,4 @@
-# Fo
+# Fo Agent
 
 > 一个帮助你减少内耗、提升觉知的 AI Agent。
 
