@@ -1,93 +1,228 @@
-# Fo Agent
+# Fo-Agent: Your AI Twin That Engages Your Audience While You Sleep
 
-> 一个帮助你减少内耗、提升觉知的 AI Agent。
+<p align="center">
+  <a href="https://github.com/AIPMAndy/fo-agent/actions/workflows/ci.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/AIPMAndy/fo-agent/ci.yml?branch=main&label=Build" alt="Build">
+  </a>
+  <a href="https://github.com/AIPMAndy/fo-agent/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
+  </a>
+  <a href="https://github.com/AIPMAndy/fo-agent/stargazers">
+    <img src="https://img.shields.io/github/stars/AIPMAndy/fo-agent?style=flat" alt="Stars">
+  </a>
+  <img src="https://img.shields.io/badge/AI-Agent-FF6B35?style=flat&logo=robot" alt="AI Agent">
+</p>
 
-Fo 是 AI禅院产品矩阵里的一个轻体验产品。它不模拟佛陀本人，也不做宗教权威表达，而是借用“佛意象 / 觉知感 / 清明感”，帮助用户在一个很短的交互里：
+---
 
-- 看见自己困住的点
-- 获得一个更清明的视角
-- 拿到一个当天就能执行的小动作
+## The Problem
 
-## v0.1 定位
+You're a creator, founder, or thought leader. People want your attention — comments, follows, DMs — and you physically cannot respond to everyone.
 
-Fo 的第一版不是复杂聊天系统，而是一个 **一问一醒** 的 web 体验：
+So you do nothing. And that hurts your growth.
 
-1. 用户输入一个困惑 / 问题
-2. Fo 给出一张回应卡片：
-   - 你困住自己的点
-   - 你真正该看见的
-   - 今天的一个动作
+Existing "engagement tools" make it worse: spammy auto-bots that fire 50 likes per minute, generic auto-replies that feel like spam, or AI helpers that reply to the same person ten times a day until the recipient unfollows in frustration.
 
-## 为什么做这个项目
+**You don't need more engagement. You need smarter engagement.**
 
-Fo 的价值，不在于“佛学知识问答”，而在于把东方觉知感转成一种现代产品体验。
+---
 
-它属于 AI禅院内部的重要产品方向，承担三个角色：
+## The Solution: One Shot, Daily
 
-- **品牌入口**：让用户第一次感受到 AI禅院的气质
-- **传播抓手**：回答卡片天然适合分享
-- **内容承接器**：后续可接知识星球、课程、项目体系
+Fo-Agent is an AI agent that engages with each person **exactly once per day** — thoughtfully, in your voice, at scale.
 
-## 风格原则
+Think of it as your digital twin. While you sleep, it:
 
-Fo 的回答应该：
+- ✅ Follows back the people who followed you today
+- ✅ Likes and comments on their recent posts — in a way that sounds like you
+- ✅ Engages across Twitter/X, LinkedIn, Facebook, Instagram, GitHub, YouTube
+- 🚫 Never spams the same person twice in one day
+- 🚫 Never sends the same generic reply twice
 
-- 安静
-- 清明
-- 克制
-- 有洞察
-- 不鸡汤
-- 不神神叨叨
-- 不经文堆砌
-- 不假装佛祖附体
+**The result: your audience feels genuinely seen. Not botted.**
 
-## 风险边界
+---
 
-- 不宣称代表佛陀或宗教权威
-- 不输出宗教裁决
-- 不替代医疗 / 心理专业支持
-- 对严重心理风险场景应明确转介
+## Why "One Shot" Matters
 
-## 如何运行
+Most engagement tools operate on volume: follow 500 people/hour, like 1000 posts/day. This is just noise.
 
-直接用浏览器打开 `index.html` 即可，或在当前目录启动一个静态服务器：
+Fo-Agent's one-shot constraint is a design decision, not a limitation:
 
-```bash
-cd projects/fo
-python3 -m http.server 8000
+| Approach | What happens | How it feels |
+|----------|-------------|--------------|
+| Manual | You engage with everyone (impossible at scale) | Burned out, inconsistent |
+| Auto-bot | Mass follow/like (obvious spam) | Receivers feel used |
+| **Fo-Agent** | One meaningful interaction/day/person | Receivers feel genuinely seen |
+
+One genuine interaction is worth more than ten generic likes.
+
+---
+
+## How It Works
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                     Fo-Agent Flow                       │
+├─────────────────────────────────────────────────────────┤
+│                                                          │
+│   1. You connect your social accounts (OAuth)            │
+│                    ↓                                      │
+│   2. Set your preferences & voice style                  │
+│                    ↓                                      │
+│   3. Agent discovers today's new followers/engagements    │
+│                    ↓                                      │
+│   4. For each person:                                    │
+│      ┌──────────────────────────────────┐               │
+│      │ LLM analyzes their profile &     │               │
+│      │ recent posts → decides WHAT to   │               │
+│      │ say and HOW to say it            │               │
+│      │ (in YOUR voice, not a bot)       │               │
+│      └──────────────────────────────────┘               │
+│                    ↓                                      │
+│   5. Executes: follow + like + optional comment           │
+│      → All in one shot, never repeats today            │
+│                    ↓                                      │
+│   6. Logs activity, consumes 1 credit                    │
+│                                                          │
+└─────────────────────────────────────────────────────────┘
 ```
 
-然后访问：
+---
 
-<http://localhost:8000>
+## Key Features
 
-## Roadmap
+### 🤖 AI-Powered, Not Scripted
+Uses LLMs (OpenAI / Anthropic / Groq / DeepSeek) to understand each person's profile and generate contextually appropriate responses — not keyword-matched templates.
 
-### v0.1
-- 单页 web MVP
-- 本地规则引擎
-- 一问一醒体验
+### 🎯 One Shot, Daily
+Built-in one-shot constraint ensures each person gets exactly one quality interaction per day. No spam. No repetition.
 
-### v0.2
-- 更丰富的回应模板
-- 回答卡片分享优化
-- 更强的品牌视觉
+### 🗣️ Your Voice, Not a Bot's
+Trained on your preferences, Fo-Agent comments and engages in a way that sounds like you — not ChatGPT.
 
-### v0.3
-- 接真实模型 API
-- 形成更自然的 Fo 回应风格
-- 接 AI禅院内容体系
+### 🌐 Multi-Platform
+Currently supports:
+- **Twitter/X** — Follow, Like, Retweet, Comment
+- **LinkedIn** — Connect, Like, Comment
+- **Facebook** — Friend Request, Like, Comment
+- **Instagram** — Follow, Like, Comment
+- **GitHub** — Follow, Star, React
+- **YouTube** — Subscribe, Like, Comment
 
-## 开源说明
+### 💳 Credit-Based Economy
+Simple pay-per-engagement model. Each unique engagement costs 1 credit. No monthly subscriptions, no lock-in.
 
-当前版本是开源 MVP，目的是尽快把产品体验跑起来，而不是一次做复杂。
+### 🛠️ Admin Dashboard
+Monitor agent activity, adjust platform settings, track credit usage, and review engagement history — all from a clean Next.js dashboard.
 
-欢迎围绕这些方向迭代：
-- 回应结构
-- 视觉气质
-- 风格一致性
-- 分享传播性
+---
 
-## License
+## Quick Start
 
-MIT
+### Prerequisites
+
+- Node.js 20+
+- npm or pnpm
+- API keys for at least one LLM provider (OpenAI, Anthropic, Groq, or DeepSeek)
+
+### Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/AIPMAndy/fo-agent.git
+cd fo-agent
+
+# Install dependencies
+npm install
+
+# Copy and configure environment variables
+cp .env.example .env
+# Edit .env with your API keys and settings
+
+# Start the agent
+npm run start:agent
+
+# (Optional) Start the admin dashboard
+npm run start:web
+```
+
+### Configuration
+
+Set the following environment variables:
+
+```env
+# At least one LLM provider
+OPENAI_API_KEY=sk-...
+# OR
+ANTHROPIC_API_KEY=sk-...
+# OR
+GROQ_API_KEY=...
+# OR
+DEEPSEEK_API_KEY=...
+
+# Admin credentials
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD=your-secure-password
+
+# Platform sessions (Puppeteer)
+TWITTER_SESSION=your-twitter-session-cookie
+LINKEDIN_SESSION=your-linkedin-session-cookie
+# ... other platforms
+```
+
+See [`.env.example`](.env.example) for the full variable list.
+
+---
+
+## Architecture
+
+```
+fo-agent/
+├── src/
+│   ├── agent/
+│   │   ├── agent.ts          # Core agent loop & orchestration
+│   │   ├── once-daily.ts     # One-shot-per-day constraint logic
+│   │   ├── llm.ts            # LLM abstraction & prompt templates
+│   │   └── providers/        # Per-platform engagement logic
+│   │       ├── twitter.ts
+│   │       ├── linkedin.ts
+│   │       └── ...
+│   ├── web/                  # Next.js admin dashboard
+│   └── shared/               # Shared types, DB, utilities
+├── scripts/
+│   └── key-manager.ts        # Session/key management utilities
+└── tests/
+```
+
+**Agent Loop:**
+1. `agent.ts` — Main loop, calls `once-daily.ts` filter, then `llm.ts` to decide action, then `providers/` to execute
+2. `once-daily.ts` — In-memory + DB deduplication (DynamoDB compatible, SQLite for local)
+3. `llm.ts` — Unified interface across OpenAI / Anthropic / Groq / DeepSeek
+
+---
+
+## Why Fork / Contribute?
+
+This project is personally built and maintained by [@AIPMAndy](https://github.com/AIPMAndy) — an AI product leader who runs Fo-Agent for his own audience.
+
+If you find it useful:
+- ⭐ Star this repo
+- 🐛 Report bugs via GitHub Issues
+- 🔀 Submit PRs for new platform support or features
+- 📢 Share your use case
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for development setup and PR guidelines.
+
+---
+
+## Related Reading
+
+- [The Case for One-Shot Engagement](https://github.com/AIPMAndy/fo-agent/discussions) — Why volume-based engagement tools fail
+- [Fo-Agent vs. Existing Solutions](https://github.com/AIPMAndy/fo-agent/discussions/2) — Comparison table
+
+---
+
+<p align="center">
+  <sub>Built with ❤️ by <a href="https://github.com/AIPMAndy">@AIPMAndy</a> · MIT License</sub>
+</p>
