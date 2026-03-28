@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Live Demo
+    url: https://aipmandy.github.io/fo-agent/
+    about: Try the live demo before opening an issue

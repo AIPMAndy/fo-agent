@@ -1,149 +1,203 @@
-# 🤖 fo-agent
+<div align="center">
 
-> 打造你的 AI Twin，让 AI 替你发声、涨粉、赚钱
+# 🌿 Fo Agent
 
-[演示 Demo](https://aipmandy.github.io/fo-agent/) · [English](README_EN.md) · [快速开始](#快速开始) · [特性](#核心特性) · [接入 AI 模型](#接入-ai-模型)
+**一个帮助你减少内耗、提升觉知的轻量 AI Agent**  
+**不是替你做决定，而是先帮你看清自己卡在哪里。**
 
----
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](./LICENSE)
+[![Demo](https://img.shields.io/badge/Demo-GitHub%20Pages-brightgreen)](https://aipmandy.github.io/fo-agent/)
+[![Frontend](https://img.shields.io/badge/Frontend-Vanilla%20JS-F7DF1E?logo=javascript&logoColor=black)](./script.js)
+[![Zero Backend](https://img.shields.io/badge/Backend-None-6E7F6A)](./index.html)
 
-## 😡 你受够了这些吗？
+**简体中文** | [English](./README_EN.md)
 
-- **AI 写出来的内容永远"AI 味"太重**，一眼假
-- 每次做账号运营都要**自己手动提问、自己回答**，累死
-- 多个 AI 平台来回切换，**Prompt 模板散落一地**
-- 想做一个能"**替你思考、替你输出**"的 AI 分身，却不知道怎么下手
-
-**fo-agent 就是来解决这些问题的。**
-
----
-
-## 💡 fo-agent 是什么？
-
-一个**浏览器端 AI Agent 可视化工作台**，让你在本地快速构建、调试、部署 AI 分身。
-
-- 零门槛：不需要写代码，**打开浏览器就能用**
-- 支持多模型：OpenAI / Claude / Gemini / 本地模型（Ollama）
-- **Dify 同步**：一键推送 Agent 到 Dify 作为后端服务
-- 可交互 Playground：所见即所得的 AI 对话调试界面
+</div>
 
 ---
 
-## ⚡ 快速开始
+## 这是什么
 
-### 方式一：直接打开演示（无需安装）
+`fo-agent` 是一个 **纯前端、零依赖、打开浏览器就能用的自我觉察型 AI Agent 原型**。
 
-👉 **[点击打开 fo-agent 在线演示](https://aipmandy.github.io/fo-agent/)**
+它不试图替你规划人生，也不试图给你灌很多“正确答案”。它做的事情更克制：
 
-> 适合快速体验，无需配置任何 API Key
+> 当你焦虑、纠结、放不下、愤怒、内耗的时候，帮你先看见：你真正卡住的点是什么，以及今天最小能做的一步是什么。
 
-### 方式二：本地部署
+这也是它和很多“万能 AI 助手”最大的区别：
+
+**Fo 不强调更强，而强调更稳、更轻、更能让人停下来。**
+
+---
+
+## 它解决什么问题
+
+很多 AI 产品都在追求：
+- 更聪明
+- 更全能
+- 更像人
+- 更会执行
+
+但人在很多时刻真正需要的，不是一个更会卷的 agent，而是一个能帮助自己：
+
+- 降低内耗
+- 拉开和情绪的距离
+- 从念头里退一步
+- 把“大问题”缩成“今天能做的一步”
+
+`fo-agent` 面向的正是这个场景。
+
+---
+
+## 为什么这个项目有传播潜力
+
+这个项目有一个很好的点：**情绪价值和产品形态是一致的。**
+
+代码本身非常轻：
+- 一个 `index.html`
+- 一个 `styles.css`
+- 一个 `script.js`
+
+但它传递的不是“我写了一个网页小工具”，而是一个更容易被记住的概念：
+
+> **一个帮助你减少内耗、提升觉知的 AI Agent。**
+
+这个概念比“AI Twin”“替你发声”“帮你赚钱”更真实，也更适合当前代码状态。
+
+---
+
+## 为什么它和普通 AI 聊天页不一样
+
+| 维度 | 普通聊天页 | Prompt 展示页 | **Fo Agent** |
+|---|---|---|---|
+| 面向场景 | 泛用 | 泛用 | ✅ 聚焦内耗 / 觉察 |
+| 交互复杂度 | 高 | 中 | ✅ 极简 |
+| 是否需要后端 | 常常需要 | 有时需要 | ✅ 不需要 |
+| 是否可本地直接打开 | 不一定 | 不一定 | ✅ 可以 |
+| 输出结构 | 随机 | 随机 | ✅ 固定为「困住点 / 看见点 / 一个动作」 |
+| 产品气质 | 全能助手 | Prompt 工具 | ✅ 平静、克制、陪伴式 |
+
+一句话：
+
+**这不是另一个 AI 聊天壳，而是一个有明确情绪场景的轻量 agent 原型。**
+
+---
+
+## 现在能做什么
+
+输入一句你当前放不下的问题，比如：
+
+- 我最近很焦虑，总担心自己做错选择
+- 我对一段关系一直放不下
+- 我现在很纠结，不知道该不该换方向
+- 我很生气，也很委屈
+
+Fo 会返回三段结构化回应：
+
+1. **你困住自己的点**
+2. **你真正该看见的**
+3. **今天的一个动作**
+
+这个结构的好处是：
+- 不会越聊越散
+- 不会一下给你太多建议
+- 更适合在情绪状态下使用
+
+---
+
+## 30 秒快速开始
+
+### 方式一：直接打开在线演示
+
+👉 [fo-agent Demo](https://aipmandy.github.io/fo-agent/)
+
+### 方式二：本地直接运行
 
 ```bash
-# 克隆仓库
 git clone https://github.com/AIPMAndy/fo-agent.git
 cd fo-agent
-
-# 用浏览器直接打开 index.html
 open index.html
 ```
 
-### 接入自己的 AI 模型
-
-1. 打开 fo-agent 界面
-2. 进入 **设置（Settings）**
-3. 选择你的 AI 提供商（OpenAI / Claude / Gemini / Ollama）
-4. 填入你的 API Key
-5. 开始使用！
-
-> ⚠️ **隐私声明**：你的 API Key 仅在本地浏览器中使用，**不会上传到任何第三方服务器**。
+无需安装依赖，无需启动服务，无需配置后端。
 
 ---
 
-## 🔥 核心特性
+## 仓库结构
 
-| 特性 | 说明 |
-|------|------|
-| 🌐 **纯前端实现** | 无需后端服务，一个 HTML 文件完整运行 |
-| 🔄 **多模型支持** | OpenAI / Claude / Gemini / Ollama |
-| 🎭 **Agent 可视化** | 拖拽式构建你的 AI 分身 |
-| 🔗 **Dify 同步** | 一键将 Agent 部署到 Dify |
-| 🎨 **对话式 Playground** | 所见即所得的调试界面 |
-| 🔒 **隐私优先** | API Key 完全在本地使用 |
-
----
-
-## 🎯 适用场景
-
-- **内容创作者**：打造一个 AI 分身帮你生产内容
-- **开发者**：快速调试 AI Prompt，不用每次都调 API
-- **产品经理**：原型验证 AI 产品思路
-- **独立开发者**：用 fo-agent + Dify 快速搭建 AI 应用
-
----
-
-## 🆚 对比其他工具
-
-| 工具 | 部署难度 | 多模型 | Dify 同步 | 纯前端 |
-|------|---------|--------|----------|--------|
-| fo-agent | ⭐ 零门槛 | ✅ | ✅ | ✅ |
-| Dify | 需要服务器 | ✅ | — | ❌ |
-| LangFlow | 需要 Python 环境 | ✅ | ❌ | ❌ |
-| OpenAI Playground | 需要联机 | 仅 OpenAI | ❌ | ❌ |
-
----
-
-## 🛠️ 技术栈
-
-- **前端**：原生 HTML + CSS + JavaScript（零依赖）
-- **AI**：OpenAI API / Anthropic Claude / Google Gemini / Ollama
-- **部署**：GitHub Pages（免费托管）
-
----
-
-## 📦 部署到 GitHub Pages
-
-```bash
-# 1. Fork 本项目
-# 2. 进入 Settings → Pages → Source → main branch
-# 3. 等待 2-3 分钟，你的站点就上线了
+```text
+.
+├── index.html     # 页面结构
+├── styles.css     # 界面样式
+├── script.js      # 核心交互与规则逻辑
+├── README.md
+├── README_EN.md
+└── LICENSE
 ```
 
 ---
 
-## 🤝 贡献
+## 当前最值得看的地方
 
-欢迎提交 Issue 和 Pull Request！
+如果你第一次看这个项目，建议重点看：
 
-1. Fork 本仓库
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 创建 Pull Request
+1. `script.js` — 当前的情绪 / 状态识别规则
+2. `index.html` — 极简交互结构
+3. 在线 Demo — 实际体验整体气质
 
 ---
 
-## 📄 许可证
+## Roadmap
 
-本项目采用 **Apache-2.0** 许可证 - 详见 [LICENSE](LICENSE) 文件
+- [x] 极简前端原型
+- [x] 零依赖本地运行
+- [x] 基于关键词的基础回应规则
+- [x] GitHub Pages 演示
+- [ ] 增加更多情绪 / 场景分类
+- [ ] 支持可配置的回应语气
+- [ ] 增加更自然的本地 LLM / API 接入版本
+- [ ] 增加日记式记录与回看
+- [ ] 增加英文场景与多语言支持
 
 ---
 
-## 👤 作者
+## 当前项目最需要优化的地方
 
-**Andy** · AI 产品专家 · 前腾讯/百度 AI 产品专家
+如果目标是“让它火”，最缺的不是再加一堆功能，而是这三件事：
 
-- GitHub: [@AIPMAndy](https://github.com/AIPMAndy)
-- 公众号：AI 产品圈
+1. **更准确的定位**：先让大家知道它到底是什么
+2. **更强的演示证据**：截图、GIF、前后对比案例
+3. **更清晰的场景传播**：它不是万能 agent，而是“减少内耗”的 agent
+
+所以这个项目最正确的增长方式，不是先做大，而是先把 **产品感觉、叙事、场景** 打透。
 
 ---
 
-## 📌 关注我
+## 贡献
 
-如果你觉得 fo-agent 有用，欢迎：
+欢迎补充：
 
-- ⭐ **Star** 本项目
-- 🍴 **Fork** 进行二次开发
-- 🐛 提交 **Issue** 反馈问题
-- 🙋 提 **PR** 贡献代码
+- 新的情绪 / 场景规则
+- 更好的文案与语气
+- 更细腻的交互设计
+- 本地模型 / API 版本实现
+- 实际使用案例
 
-你的支持是我持续维护的动力！
+请先阅读：[CONTRIBUTING.md](./CONTRIBUTING.md)
+
+---
+
+## License
+
+Apache-2.0
+
+---
+
+## 如果这个项目对你有帮助
+
+请直接做两件事：
+
+1. 给项目一个 **⭐ Star**
+2. 分享给一个最近正在内耗的人
+
+如果它真的帮人停下来一下，这个项目就有意义。
